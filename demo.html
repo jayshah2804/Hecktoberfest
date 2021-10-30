@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="spatialapilist">
+        <li>
+            <p style="color: blue; cursor: pointer;  text-decoration: underline; display: block;" onclick="layerarea()">GET Layer/area</p>
+        <li>
+            <p style="color: blue; cursor: pointer;  text-decoration: underline; position: relative; display: block;" onclick="layercentroid()">GET
+                Layer/centroid</p>
+        </li>
+        <li>
+            <p style="color: blue; cursor: pointer;  text-decoration: underline; position: relative; display: flex;" onclick="layerclosestpoint()">GET
+                Layer/closestpoint</p>
+        </li>
+        </li>
+    </div>
+    <script>
+        function layerarea()
+        {
+            var count = document.getElementById("spatialapilist").children.length;
+            for(var t = 1; t <= count; t++)
+            {
+                var spatial = document.querySelector(`#spatialapilist > li:nth-child(${t}) > p`);
+                // console.log(spatial.style.display);
+                if(spatial.style.display == `block`)
+                {
+                    document.getElementById("spatialapilist").style.display = "block";
+                }
+            }
+         
+        }
+    </script>
+</body>
+</html>
